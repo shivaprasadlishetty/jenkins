@@ -4,7 +4,7 @@ pipelineJob('roboshop-ansible') {
       'scm'(class:'hudson.plugins.git.GitSCM',plugin:'git') {
         'userRemoteConfigs' {
           'hudson.plugins.git.UserRemoteConfig' {
-            'url'('ERROR: script not yet approved for use')
+            'url'('https://github.com/shivaprasadlishetty/ansible.git')
           }
         }
         'branches' {
