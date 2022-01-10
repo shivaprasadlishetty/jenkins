@@ -12,7 +12,7 @@
 //         }
 //     }
 // }
-
+//
 // Agent example
 //
 // pipeline {
@@ -45,7 +45,7 @@
 //  }
 // }
 environment example
-
+//
 pipeline {
  agent any
  environment {
