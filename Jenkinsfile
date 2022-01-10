@@ -44,6 +44,7 @@
 //    }
 //  }
 // }
+//
 environment example
 pipeline {
  agent any
@@ -65,4 +66,5 @@ pipeline {
      }
    }
  }
+}
 }
