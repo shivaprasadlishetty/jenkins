@@ -53,7 +53,6 @@ pipeline {
    SSH = credentials("CENTOS")
    SSH1 = credentials("common/ssh")
  }
- }
  stages {
    stage('ONE') {
      environment {
