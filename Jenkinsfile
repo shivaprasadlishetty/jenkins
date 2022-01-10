@@ -33,13 +33,36 @@
 //       }
 //     }
 //   }
+// pipeline {
+//  agent any
+//  options { disableConcurrentBuilds() }
+//  stages {
+//    stage('ONE') {
+//      steps {
+//        sh 'sleep 10'
+//      }
+//    }
+//  }
+// }
+environment example
+
 pipeline {
  agent any
- options { disableConcurrentBuilds() }
+ environment {
+   URL1 = "google.com"
+   SSH = credentials("CENTOS")
+   SSH1 = credentials("common/ssh")
+ }
  stages {
    stage('ONE') {
+     environment {
+       URL1 = "yahoo.com"
+     }
      steps {
-       sh 'sleep 10'
+       sh 'echo ${URL1}'
+       sh 'env'
+       echo SSH
+       sh 'echo ${SSH1} | base64'
      }
    }
  }
